@@ -5,7 +5,6 @@ exports.askAI = async (question) => {
     throw new Error("Question must be a non-empty string");
   }
 
-  // Try Gemini ONLY if key exists
   if (process.env.GEMINI_API_KEY) {
     try {
       const response = await axios.post(
